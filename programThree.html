@@ -1,0 +1,38 @@
+<html>
+<body>
+<h2>Program Three</h2>
+<p id="prototype"></p>
+
+<script>
+  function Vehicle(make, model, year, color){
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.color = color;
+  }
+
+  Vehicle.prototype.miles = 5700;
+  Vehicle.prototype.type = "car";
+  Vehicle.prototype.mpg = 25;
+
+
+    var hondaCivic = new Vehicle("Honda", "Civic", 2009, "red");
+    document.getElementById("prototype").innerHTML =
+    "The first car is a " + hondaCivic.year + " " + hondaCivic.make + " " + hondaCivic.model;
+
+    var fordFocus = new Vehicle("Ford", "Focus", 2012, "white");
+    document.getElementById("prototype").innerHTML =
+    "The second car is a " + fordFocus.year + " " + fordFocus.make + " " + fordFocus.model;
+
+    var toyotaCamry = new Vehicle("Toyota", "Camry", 2003, "blue");
+    document.getElementById("prototype").innerHTML =
+    "The third car is a " + toyotaCamry.year + " " + toyotaCamry.make + " " + toyotaCamry.model
+    + " with a fuel efficiency of "+ toyotaCamry.mpg + " miles per gallon.";
+
+
+</script>
+
+
+
+</body>
+</html>

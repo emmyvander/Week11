@@ -1,0 +1,66 @@
+<html>
+
+<body>
+  <h2>Program Four</h2>
+
+  <!--URL-->
+  <p id="browser"></p>
+  <script>
+    document.getElementById("browser").innerHTML =
+      "The full URL of this page is:<br> " + window.location.href;
+  </script>
+
+
+  <!--Current Event-->
+  <button onclick="setTimeout(funcStart,9000);">Run Current Event</button>
+  <script>
+    function funcStart() {
+      alert('Pete Buttigieg is the first openly gay candidate running for president.');
+    }
+  </script>
+
+
+  <!--Go Back/Forward-->
+  <script>
+    function goBack() {
+      window.histoy.back()
+    }
+
+    function goFwd() {
+      window.history.forward()
+    }
+  </script>
+  <br>
+  <button onclick="goBack()">Go Back</button>
+  <br>
+  <button onclick="goFwd()">Go Forward</button>
+  <br>
+
+
+  <!--Redirect-->
+  <input type="button" value="Load Article" onclick="newPage()">
+  <script>
+    function newPage() {
+      window.location.assign("https://www.ctpost.com/news/article/In-Pete-Buttigieg-America-deals-with-a-new-kind-13747087.php");
+    }
+  </script>
+
+
+  <!--Path-->
+  <p id="path"></p>
+  <script>
+    document.getElementById("path").innerHTML =
+      "Page path is " + window.location.pathname;
+  </script>
+
+
+<!--Cookies-->
+  <p id="cookie"></p>
+  <script>
+    document.getElementById("cookie").innerHTML =
+      "Are cookies enabled or not?  " + navigator.cookieEnabled;
+  </script>
+
+
+</body>
+</html>
